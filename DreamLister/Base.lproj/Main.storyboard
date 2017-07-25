@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="t7a-IS-W4e">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="t7a-IS-W4e">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -34,17 +34,85 @@
                                 </segments>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dql-nr-w6d">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dql-nr-w6d">
                                 <rect key="frame" x="16" y="132" width="343" height="535"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="bnX-Mf-dG6">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="150" id="bnX-Mf-dG6" customClass="ItemCell" customModule="DreamLister" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bnX-Mf-dG6" id="tcQ-Nk-KMF">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="149.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dVE-t3-iX0">
+                                                    <rect key="frame" x="8" y="8" width="327" height="133"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Red_Bay-1440.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="LPD-Qu-q0H">
+                                                            <rect key="frame" x="8" y="16.5" width="100" height="100"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="100" id="O3k-Xh-ydc"/>
+                                                                <constraint firstAttribute="width" constant="100" id="mCm-OM-i6a"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tesla Model S" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5E-Ye-N41">
+                                                            <rect key="frame" x="116" y="8" width="203" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="H1A-36-3ce"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                                            <color key="textColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$80,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Np-4z-Lko">
+                                                            <rect key="frame" x="116" y="37" width="203" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="FSk-Us-du9"/>
+                                                                <constraint firstAttribute="height" constant="21" id="Ng7-UB-YvD"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                                            <color key="textColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some day my dreams will come true and I will own this car" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iez-d9-mkt">
+                                                            <rect key="frame" x="116" y="66" width="203" height="57"/>
+                                                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                                            <color key="textColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="iez-d9-mkt" firstAttribute="leading" secondItem="LPD-Qu-q0H" secondAttribute="trailing" constant="8" id="8KQ-PH-sqb"/>
+                                                        <constraint firstItem="X5E-Ye-N41" firstAttribute="top" secondItem="dVE-t3-iX0" secondAttribute="top" constant="8" id="8sM-t5-yub"/>
+                                                        <constraint firstItem="iez-d9-mkt" firstAttribute="top" secondItem="8Np-4z-Lko" secondAttribute="bottom" constant="8" id="C3d-dc-tbZ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="X5E-Ye-N41" secondAttribute="trailing" constant="8" id="LTw-qx-D3l"/>
+                                                        <constraint firstItem="8Np-4z-Lko" firstAttribute="leading" secondItem="LPD-Qu-q0H" secondAttribute="trailing" constant="8" id="S83-RV-Job"/>
+                                                        <constraint firstItem="8Np-4z-Lko" firstAttribute="top" secondItem="X5E-Ye-N41" secondAttribute="bottom" constant="8" id="SpA-Ks-YLc"/>
+                                                        <constraint firstAttribute="trailing" secondItem="iez-d9-mkt" secondAttribute="trailing" constant="8" id="hXn-ws-jpB"/>
+                                                        <constraint firstItem="LPD-Qu-q0H" firstAttribute="leading" secondItem="dVE-t3-iX0" secondAttribute="leading" constant="8" id="r4e-yO-uAs"/>
+                                                        <constraint firstItem="LPD-Qu-q0H" firstAttribute="centerY" secondItem="dVE-t3-iX0" secondAttribute="centerY" id="tev-MQ-rxV"/>
+                                                        <constraint firstItem="X5E-Ye-N41" firstAttribute="leading" secondItem="LPD-Qu-q0H" secondAttribute="trailing" constant="8" id="yod-RY-4sR"/>
+                                                        <constraint firstAttribute="trailing" secondItem="8Np-4z-Lko" secondAttribute="trailing" constant="8" id="zNJ-WV-bTe"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="dVE-t3-iX0" secondAttribute="bottom" id="Yrm-Mr-3Tb"/>
+                                                <constraint firstItem="dVE-t3-iX0" firstAttribute="top" secondItem="tcQ-Nk-KMF" secondAttribute="topMargin" id="eIS-3T-U4B"/>
+                                                <constraint firstItem="dVE-t3-iX0" firstAttribute="leading" secondItem="tcQ-Nk-KMF" secondAttribute="leadingMargin" id="eLe-m6-9P9"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="dVE-t3-iX0" secondAttribute="trailing" id="r6f-Ma-3gn"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="details" destination="iez-d9-mkt" id="Wvm-py-Y6F"/>
+                                            <outlet property="price" destination="8Np-4z-Lko" id="D0X-SJ-Eco"/>
+                                            <outlet property="thumb" destination="LPD-Qu-q0H" id="I57-nZ-vPq"/>
+                                            <outlet property="title" destination="X5E-Ye-N41" id="t1r-A7-vZ3"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -65,6 +133,10 @@
                             <color key="tintColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="segment" destination="mAf-Ut-bDX" id="f34-Cm-TQ7"/>
+                        <outlet property="tableView" destination="Dql-nr-w6d" id="Rfs-vV-kIU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -75,7 +147,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="t7a-IS-W4e" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="T0l-yM-j8n">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="T0l-yM-j8n">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -93,4 +165,7 @@
             <point key="canvasLocation" x="540" y="791.15442278860576"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Red_Bay-1440.jpg" width="1440" height="670"/>
+    </resources>
 </document>
